@@ -356,8 +356,8 @@ export function normalizeRoots(requests: IWatcherRequest[]): { [basePath: string
 			}
 		} else {
 			prevRequest = { path: basePath, excludes: ignored };
-			//result[basePath] = [prevRequest];
-			if(result.hasOwnProperty(basePath)) result[basePath]=[prevRequest];
+			result[basePath] = [prevRequest];
+			//if(result.hasOwnProperty(basePath)) result[basePath]=[prevRequest];
 		}
 	}
 
